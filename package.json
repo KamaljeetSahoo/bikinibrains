@@ -1,0 +1,32 @@
+{
+  "name": "a-star-algorithm",
+  "version": "2.0.0",
+  "private": true,
+  "description": "An interactive A* pathfinding visualiser. No dependencies, no build step.",
+  "homepage": "https://kamaljeetsahoo.github.io/A-star-Algorithm/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KamaljeetSahoo/A-star-Algorithm.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "a-star",
+    "astar",
+    "pathfinding",
+    "pathfinding-visualizer",
+    "algorithm-visualization",
+    "dijkstra",
+    "heuristic-search",
+    "canvas",
+    "javascript"
+  ],
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "audit": "node tools/contrast-audit.js",
+    "check": "npm test && npm run audit",
+    "serve": "python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

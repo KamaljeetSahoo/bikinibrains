@@ -96,11 +96,16 @@
         </div>
 
         <div class="plate">
+          <!-- role="application" rather than "img": the board handles its own
+               arrow keys, and a screen reader in browse mode would otherwise
+               swallow them for document navigation before the page saw them.
+               Everything it does is narrated through the #live region. -->
           <canvas
             id="board"
             tabindex="0"
-            role="img"
-            aria-label="Pathfinding grid. Use the arrow keys to move the cell cursor, Enter to toggle a wall, 1 to place the start, 2 to place the goal."
+            role="application"
+            aria-roledescription="Pathfinding grid"
+            aria-label="Pathfinding grid. Arrow keys move the cell cursor, Enter toggles a wall, 1 places the start, 2 places the goal."
           ></canvas>
         </div>
 

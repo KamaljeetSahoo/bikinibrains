@@ -56,6 +56,18 @@ import. If you want a pathfinder for real work, use a real one — but if you wa
 
 <img src="assets/img/interface-dark.png" alt="The visualiser interface: the board on the left showing a completed search, with playback, board and search controls on the right." width="100%">
 
+<details>
+<summary>It has a light theme too</summary>
+
+<img src="assets/img/interface-light.png" alt="The same interface in the light theme: a white board, an indigo search wake deepening outward, and vivid cyan frontier cells." width="100%">
+
+The canvas reads its colours from the same CSS custom properties as the rest of
+the page, so the two themes are one stylesheet rather than two. The wake runs
+the opposite way on white — palest at the start, deepening outward — because a
+wake that faded out as it spread would lose its own edge against the page.
+
+</details>
+
 ## How A\* actually works
 
 Imagine you are hiking to a summit you can see on the horizon, and you reach a fork in
@@ -156,7 +168,7 @@ It works straight off the filesystem. If you would rather serve it:
 python3 -m http.server 8000    # then visit http://localhost:8000
 ```
 
-To run the tests you need Node 18 or newer, but nothing from npm:
+To run the tests you need Node 20 or newer, but nothing from npm:
 
 ```bash
 npm test          # search-engine tests, via node --test
@@ -175,8 +187,11 @@ src/
   maze.js             recursive-backtracker maze generation
   renderer.js         canvas drawing; reads its palette from the CSS
   app.js              wiring, controls, pointer and keyboard input
-tests/engine.test.js  correctness tests for the search
-tools/contrast-audit.js  contrast checker for the palette
+tests/
+  engine.test.js      optimality, heuristics, corner rules, heap invariants
+  edge-cases.test.js  degenerate boards, awkward grid sizes, reopening
+tools/contrast-audit.js
+                      contrast checker for both theme palettes
 ```
 
 `search.js` is the interesting one, and it is meant to be read. The three algorithms

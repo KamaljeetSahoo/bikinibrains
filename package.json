@@ -21,12 +21,12 @@
     "javascript"
   ],
   "scripts": {
-    "test": "node --test \"tests/**/*.test.js\"",
+    "test": "node --test tests/engine.test.js tests/edge-cases.test.js",
     "audit": "node tools/contrast-audit.js",
     "check": "npm test && npm run audit",
     "serve": "python3 -m http.server 8000"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }

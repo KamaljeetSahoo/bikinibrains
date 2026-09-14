@@ -422,6 +422,11 @@ kbd {
   position: relative;
   aspect-ratio: 1;
   width: 100%;
+  /* The board is square, so on a wide-but-short window "full width" would make
+     it taller than the viewport and push its own bottom edge off screen. Cap it
+     against the height left over after the surrounding chrome, and centre it. */
+  max-width: max(260px, min(100%, calc(100vh - 265px)));
+  margin-inline: auto;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);

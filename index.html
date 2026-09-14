@@ -109,13 +109,18 @@
           ></canvas>
         </div>
 
+      </section>
+
+      <!-- Sits under the board on a desktop, but below the controls on a phone,
+           so that Play is reachable without scrolling past the read-outs. -->
+      <section class="readouts" aria-label="Search read-out">
         <p class="guarantee" id="guarantee" data-optimal="true">
           <span class="guarantee__tag" aria-hidden="true">Guarantee</span>
           <span id="guaranteeText"></span>
         </p>
 
         <div class="probe" id="probe" data-active="false">
-          <span class="probe__cell" id="probeCell">Hover the board</span>
+          <span class="probe__cell" id="probeCell">Point at a cell</span>
           <span class="probe__sum" aria-hidden="true">
             <span class="probe__term probe__term--g"><i>g</i> <b id="probeG">—</b></span>
             <span class="probe__op">+</span>
@@ -123,7 +128,6 @@
             <span class="probe__op">=</span>
             <span class="probe__term probe__term--f"><i>f</i> <b id="probeF">—</b></span>
           </span>
-          <span class="visually-hidden" id="probeSpoken"></span>
         </div>
       </section>
 

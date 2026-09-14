@@ -335,6 +335,9 @@ kbd {
 .workspace {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--panel-width);
+  grid-template-areas:
+    "stage panel"
+    "readouts panel";
   gap: var(--gap);
   align-items: start;
   max-width: 1400px;
@@ -342,15 +345,37 @@ kbd {
   padding-block: var(--gap);
 }
 
-@media (max-width: 960px) {
+.stage {
+  grid-area: stage;
+}
+
+.readouts {
+  grid-area: readouts;
+}
+
+.panel {
+  grid-area: panel;
+}
+
+/* Below this the panel cannot sit beside the board and still leave it usable.
+   A landscape phone is wider than this, so it keeps the two-column layout —
+   stacking there would waste the width it does have. */
+@media (max-width: 840px) {
   .workspace {
     grid-template-columns: minmax(0, 1fr);
+    /* Controls come before the read-outs on a narrow screen: Play should be
+       reachable without scrolling past a paragraph about optimality. */
+    grid-template-areas:
+      "stage"
+      "panel"
+      "readouts";
   }
 }
 
 /* ------------------------------------------------------------------ stage */
 
-.stage {
+.stage,
+.readouts {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -424,8 +449,12 @@ kbd {
   width: 100%;
   /* The board is square, so on a wide-but-short window "full width" would make
      it taller than the viewport and push its own bottom edge off screen. Cap it
-     against the height left over after the surrounding chrome, and centre it. */
+     against the height left over after the surrounding chrome, and centre it.
+     svh is the *small* viewport height — the one that excludes a mobile
+     browser's retractable toolbars — so the board does not resize as the URL
+     bar slides away mid-scroll. */
   max-width: max(260px, min(100%, calc(100vh - 265px)));
+  max-width: max(260px, min(100%, calc(100svh - 265px)));
   margin-inline: auto;
   padding: 10px;
   border: 1px solid var(--line);
@@ -964,13 +993,61 @@ kbd {
 
 /* ------------------------------------------------------------ small print */
 
+@media (max-width: 700px) {
+  /* Twelve single-file rows of keyboard shortcuts is a lot of scrolling on a
+     phone. Two narrow columns halves it without hiding anything. */
+  .keys {
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 6px 10px;
+  }
+
+  .keys li {
+    font-size: 12px;
+  }
+
+  kbd {
+    min-width: 34px;
+  }
+}
+
 @media (max-width: 560px) {
+  /* Keep the masthead on one row. Left to wrap it costs ~80px at the top of
+     every screen, which on a phone is the difference between the controls
+     being visible under the board and not. */
   .masthead {
-    padding-block: 16px 14px;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-block: 14px 12px;
+  }
+
+  .glyph {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .masthead__titles h1 {
+    font-size: 15px;
   }
 
   .masthead__titles p {
     display: none;
+  }
+
+  /* The GitHub link becomes icon-only, but its name has to survive for screen
+     readers — so the label is clipped, not display:none'd. */
+  .masthead .button--ghost {
+    min-width: 44px;
+    padding-inline: 12px;
+  }
+
+  .masthead .button--ghost .button__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 
   .transport {
@@ -987,6 +1064,83 @@ kbd {
 
   .legend__note {
     display: none;
+  }
+}
+
+/* --------------------------------------------------------------- touch input
+
+   A finger is not a mouse pointer. Everything interactive gets a 44px target,
+   and form controls go to 16px because iOS Safari zooms the whole page when
+   you focus anything smaller — which on this layout throws the board off
+   screen and cannot be undone without a pinch. */
+
+@media (pointer: coarse) {
+  .button {
+    min-height: 44px;
+  }
+
+  .button--icon {
+    width: 44px;
+  }
+
+  select {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  input[type="range"] {
+    height: 44px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    margin-top: -9px;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  .switch {
+    min-height: 44px;
+  }
+
+  .switch__track {
+    width: 42px;
+    height: 26px;
+  }
+
+  .switch__track::after {
+    width: 20px;
+  }
+
+  .switch input:checked + .switch__track::after {
+    transform: translateX(16px);
+  }
+
+  .legend button {
+    min-height: 44px;
+  }
+
+  /* Inline links in running text are the easiest thing to miss: give them a
+     real box without disturbing the line height around them. */
+  .colophon a,
+  .field__hint a {
+    display: inline-block;
+    min-height: 44px;
+    padding-block: 12px;
+  }
+
+  .skip-link {
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+  }
+
+  .stat {
+    padding: 10px 11px;
   }
 }
 

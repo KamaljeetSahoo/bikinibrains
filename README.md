@@ -53,6 +53,8 @@ import. If you want a pathfinder for real work, use a real one — but if you wa
 - **Use it without a mouse.** Focus the board and the arrow keys move a cell cursor;
   <kbd>Enter</kbd> toggles a wall, <kbd>1</kbd> and <kbd>2</kbd> drop the start and goal.
   State changes are announced to screen readers.
+- **Use it on a phone.** Drawing, dragging the markers and inspecting a cell all work
+  by touch, and the layout is built for a small screen rather than merely surviving one.
 
 <img src="assets/img/interface-dark.png" alt="The visualiser interface: the board on the left showing a completed search, with playback, board and search controls on the right." width="100%">
 
@@ -65,6 +67,22 @@ The canvas reads its colours from the same CSS custom properties as the rest of
 the page, so the two themes are one stylesheet rather than two. The wake runs
 the opposite way on white — palest at the start, deepening outward — because a
 wake that faded out as it spread would lose its own edge against the page.
+
+</details>
+
+<details>
+<summary>And it is built for a phone, not just shrunk to fit one</summary>
+
+<img src="assets/img/interface-mobile.png" alt="The visualiser on a phone: a single-row header, the board, and the full playback controls all visible without scrolling." width="320">
+
+The board and the whole transport fit on the first screen of a 320px-wide
+phone. On a narrow layout the controls are ordered ahead of the read-outs, so
+Play is reachable without scrolling past a paragraph about optimality. Every
+control is at least a 44×44px target, form controls are 16px so that iOS
+Safari does not zoom the page when you tap one, and the board's `f = g + h`
+read-out responds to a tap since there is no hover to respond to. A landscape
+phone keeps the two-column layout rather than stacking, because stacking would
+waste the width it does have.
 
 </details>
 

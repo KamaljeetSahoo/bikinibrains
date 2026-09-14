@@ -16,6 +16,8 @@ const state = {
   stepCredit: 0,
   finishedAt: 0,
   hoverIndex: -1,
+  /** True while the board is being driven by a finger rather than a mouse. */
+  touching: false,
   /** Separate from the pointer: the cell the keyboard is pointing at. */
   cursorIndex: -1,
   pointer: null,
@@ -271,7 +273,7 @@ function syncProbe(index = state.hoverIndex !== -1 ? state.hoverIndex : state.cu
 
   if (index === -1 || !search) {
     ui.probe.dataset.active = 'false';
-    ui.probeCell.textContent = 'Hover the board';
+    ui.probeCell.textContent = 'Point at a cell';
     ui.probeG.textContent = ui.probeH.textContent = ui.probeF.textContent = '—';
     return;
   }
@@ -367,6 +369,11 @@ function forEachCellBetween(from, to, visit) {
 function onPointerDown(event) {
   const index = pointerCell(event);
   if (index === -1) return;
+
+  // A touch has no hover phase, so the tap itself is what fills the read-out.
+  state.hoverIndex = index;
+  state.touching = event.pointerType === 'touch';
+  syncProbe();
 
   ui.board.setPointerCapture(event.pointerId);
 
@@ -596,6 +603,9 @@ function bindControls() {
   ui.board.addEventListener('pointerup', onPointerUp);
   ui.board.addEventListener('pointercancel', onPointerUp);
   ui.board.addEventListener('pointerleave', () => {
+    // Lifting a finger fires pointerleave too. Clearing then would blank the
+    // read-out the instant it became useful, so touch keeps its last cell.
+    if (state.touching) return;
     state.hoverIndex = -1;
     syncProbe();
   });

@@ -16,7 +16,7 @@ Every page in this wiki is a Markdown file in the repository's `wiki/` folder. N
 
 **File names become page names.** GitHub turns hyphens into spaces, so `Lesson-Contract.md` becomes the page "Lesson Contract". Link between pages with the file name and no `.md` suffix, for example `[Lesson contract](Lesson-Contract)`. Two files are special: `_Sidebar.md` is the navigation on every page, and `_Footer.md` is the line at the bottom.
 
-**One-time set-up.** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. Before the first publish, the owner opens the repository's Wiki tab, saves any first page (a single line is enough), then runs **Publish wiki** again. The first publish replaces that page. The owner also ticks "Restrict editing to collaborators only" under **Settings → General → Features → Wikis**, so that changes come through pull requests.
+**One-time set-up (done on 2026-09-23).** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. The owner saved a first page, and the first publish replaced it. One step is still the owner's: ticking "Restrict editing to collaborators only" under **Settings → General → Features → Wikis**, so that changes come through pull requests (#38).
 
 **Status banners.** A page that is still a draft opens with a status note, such as "Proposed" or "Draft v0". When the owner signs a page off, the banner changes in a pull request, and any decision it contains goes into the decision log in the same pull request.
 
@@ -75,6 +75,9 @@ The form sets the type and the first labels. Add the phase label, and any other 
 ### Working an issue
 
 - Link the pull request that finishes an issue by writing "Closes #12" in its description. The issue then closes when the pull request is merged.
+- Keep issues current as the work lands, not afterwards. Tick each "Done when" item as it is met, leave one comment that says what changed (with the commit) and what is left, and close the issue once every item is ticked.
+- Keep the wiki current in the same way. A change that makes a page out of date updates that page in the same commit or pull request, including status banners, roadmap exit criteria and the open questions on [Vision](Vision).
+- A decision is recorded in three places at once: a comment on its issue, which then closes; an entry in the [decision log](Decision-Log); and any page that listed it as open.
 - When an issue is waiting on the owner, add `needs-owner` and say exactly what is needed: a yes or no, a choice between named options, or a sign-off.
 - When an issue is closed without being done, say why.
 - The [roadmap](Roadmap) has saved filters for each phase, the epics, open decisions and everything waiting on the owner.

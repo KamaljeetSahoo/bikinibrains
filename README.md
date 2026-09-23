@@ -1,3 +1,9 @@
+> **This repository is becoming bikinibrains:** free, interactive lessons on how technology
+> works, each one a precise drawing you learn by acting on. The A\* visualiser below is where
+> it started, and the working prototype for the first lesson, BB-001. Plans live in the
+> [wiki](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki) and the work is tracked in
+> [issues](https://github.com/KamaljeetSahoo/A-star-Algorithm/issues).
+
 <div align="center">
 
 # A\* Pathfinding Visualiser

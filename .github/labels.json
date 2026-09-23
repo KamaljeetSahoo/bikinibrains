@@ -1,0 +1,18 @@
+[
+  { "name": "epic", "color": "26407E", "description": "A phase-sized body of work; its tasks are sub-issues" },
+  { "name": "decision", "color": "E4B429", "description": "A choice to make, with the options and trade-offs written down" },
+  { "name": "needs-owner", "color": "BD3E0A", "description": "Waiting on the owner's call or sign-off" },
+
+  { "name": "phase:0-foundation", "color": "0E3A7A", "description": "Idea, content and theme, settled before building" },
+  { "name": "phase:1-design-system", "color": "174A87", "description": "Design system v0: tokens, line primitives, components" },
+  { "name": "phase:2-lesson-bb001", "color": "3A6DB0", "description": "BB-001, A* as a guided lesson" },
+  { "name": "phase:3-launch", "color": "6F97CF", "description": "Site skeleton, custom domain and launch" },
+
+  { "name": "area:vision", "color": "5B4B8A", "description": "What bikinibrains is, and who it is for" },
+  { "name": "area:content", "color": "2E6B4F", "description": "Lessons, questions, captions and the content map" },
+  { "name": "area:learning", "color": "1F7F6A", "description": "How a lesson teaches: principles, the lesson contract, testing" },
+  { "name": "area:design", "color": "9A5B13", "description": "Visual direction, the design system and screens" },
+  { "name": "area:engineering", "color": "4A5563", "description": "Code for lessons, the drawing engine and the site" },
+  { "name": "area:infra", "color": "2F3A48", "description": "Repository, hosting, domain and automation" },
+  { "name": "area:ops", "color": "7A6440", "description": "Running it for free: costs, licence, support, process" }
+]

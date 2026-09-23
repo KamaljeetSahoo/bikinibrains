@@ -1,0 +1,34 @@
+name: Sync labels
+
+# Creates or updates every label listed in .github/labels.json, so the label
+# set is versioned with the code. Labels that aren't listed are left alone.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/labels.json"
+      - ".github/workflows/labels.yml"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create or update labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          jq -c '.[]' .github/labels.json | while read -r label; do
+            name=$(jq -r '.name' <<<"$label")
+            gh label create "$name" \
+              --color "$(jq -r '.color' <<<"$label")" \
+              --description "$(jq -r '.description' <<<"$label")" \
+              --force --repo "$GITHUB_REPOSITORY"
+          done

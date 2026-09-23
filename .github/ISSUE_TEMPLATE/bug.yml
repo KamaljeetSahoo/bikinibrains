@@ -1,0 +1,38 @@
+name: Bug
+description: Something on the site or in a lesson doesn't work, or teaches something wrong.
+title: "Bug: "
+type: Bug
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      placeholder: |
+        1. Open …
+        2. Click …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+  - type: input
+    id: device
+    attributes:
+      label: Browser and device
+      placeholder: Safari 18 on iPhone 15, Chrome 140 on Windows…
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - Something is broken
+        - Something teaches the wrong thing
+        - Accessibility (keyboard, screen reader, contrast, motion)
+        - Looks wrong on this screen size

@@ -1,0 +1,67 @@
+name: Lesson proposal
+description: Propose a question for a new lesson sheet in the drawing register.
+title: "Lesson: "
+labels: ["area:content"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A lesson answers one question a curious person actually asks, by letting them act on a
+        precise drawing. See the [Content map](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki/Content-Map) and the
+        [Lesson contract](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki/Lesson-Contract) before proposing.
+  - type: input
+    id: question
+    attributes:
+      label: The question, in the learner's words
+      description: This becomes the sheet's title.
+      placeholder: How does a map find the shortest way through a building?
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: The technical subject
+      description: This becomes the subtitle.
+      placeholder: A* search
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: What the learner draws or acts on
+      description: The one mechanism the drawing shows, and what the learner does to it at each step.
+    validations:
+      required: true
+  - type: input
+    id: convention
+    attributes:
+      label: Drawn as
+      description: The drafting convention that fits (floor plan, section, elevation, schematic, sequence drawing…).
+      placeholder: Floor plan — a route found through rooms
+  - type: textarea
+    id: aha
+    attributes:
+      label: The "aha" in one sentence
+      description: What the learner understands at the end that they didn't at the start.
+    validations:
+      required: true
+  - type: textarea
+    id: misconceptions
+    attributes:
+      label: Predictable wrong answers
+      description: The two or three mistakes a learner is likely to make, so feedback can name them.
+  - type: textarea
+    id: prior-art
+    attributes:
+      label: Prior art to learn from and credit
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Does it pass the bar?
+      options:
+        - label: Many people actually ask this question
+        - label: The mechanism can be drawn and acted on, not just described
+        - label: The "aha" is reachable in about 15 minutes
+        - label: It builds towards later lessons
+        - label: We can make it correct (an expert can review it)

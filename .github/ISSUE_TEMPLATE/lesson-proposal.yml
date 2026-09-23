@@ -8,8 +8,8 @@ body:
     attributes:
       value: |
         A lesson answers one question a curious person actually asks, by letting them act on a
-        precise drawing. See the [Content map](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki/Content-Map) and the
-        [Lesson contract](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki/Lesson-Contract) before proposing.
+        precise drawing. See the [Content map](https://github.com/KamaljeetSahoo/bikinibrains/wiki/Content-Map) and the
+        [Lesson contract](https://github.com/KamaljeetSahoo/bikinibrains/wiki/Lesson-Contract) before proposing.
   - type: input
     id: question
     attributes:

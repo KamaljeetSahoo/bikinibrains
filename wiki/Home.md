@@ -12,7 +12,7 @@ No prior technical knowledge is assumed, and nothing is dumbed down. There is no
 - the first three lessons after BB-001 are chosen;
 - a theme direction is chosen in Claude Design;
 - a licence for lesson content is chosen;
-- the repository is renamed after the domain, bikinibrains.com (whether the name is exactly the domain is P-5 in the [decision log](Decision-Log)).
+- the repository is renamed after the domain: done, it is now `bikinibrains` (D-006 in the [decision log](Decision-Log)).
 
 What exists today:
 
@@ -39,7 +39,7 @@ Read the pages in this order. The first three explain the idea; the rest explain
 
 ## Get involved
 
-- **Report a problem or suggest an improvement** by opening an issue in the repository's [Issues tab](https://github.com/KamaljeetSahoo/A-star-Algorithm/issues).
+- **Report a problem or suggest an improvement** by opening an issue in the repository's [Issues tab](https://github.com/KamaljeetSahoo/bikinibrains/issues).
 - **Suggest a lesson.** The best ideas are questions many people actually ask, about something that can be drawn and acted on, with one clear "aha" inside 15 minutes. The [content map](Content-Map) explains how to propose one.
 - **Improve a wiki page** with a pull request. Every page here is a Markdown file in the repository's `wiki/` folder, and a GitHub Action publishes that folder to this wiki whenever a change is merged into `master`. Please edit the file rather than the page in the wiki's web editor, because changes made there can be lost at the next publish.
 - **Argue with a draft.** If a Proposed page gets something wrong, open an issue that names the page and says why. Drafts get better that way.

@@ -26,4 +26,4 @@ body:
     id: outcome
     attributes:
       label: Outcome
-      description: Filled in once decided. Record it in the [Decision log](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki/Decision-Log) too.
+      description: Filled in once decided. Record it in the [Decision log](https://github.com/KamaljeetSahoo/bikinibrains/wiki/Decision-Log) too.

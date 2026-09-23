@@ -102,7 +102,7 @@ These are the owner's to settle. Each is tracked in the [decision log](Decision-
 - **P-2 Licence for lesson content.** CC BY 4.0 invites translation and reuse; CC BY-NC 4.0 blocks commercial reuse but is likely to attract fewer contributions. The code stays MIT either way.
 - **P-3 The first three lessons after BB-001.** The candidates are on the [content map](Content-Map).
 - **P-4 Analytics.** None at all, or privacy-light analytics used only to find where learners get stuck.
-- **P-5 Repository name.** Exactly the domain, "bikinibrains.com", or "bikinibrains".
+- **P-5 Repository name.** Decided: `bikinibrains` (D-006).
 
 Longer-term questions, not yet on the decision log:
 

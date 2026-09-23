@@ -27,7 +27,7 @@ After launch: one flagship lesson every one to two months, with small, time-boxe
 - The first three lessons after BB-001 chosen from the content map (P-3 in the [decision log](Decision-Log)).
 - A theme direction chosen in Claude Design. This confirms or changes the working direction, the engineering drawing (D-005). Which paper readers see first (P-1) can be explored at the same time, but it isn't an exit criterion.
 - A licence for lesson content (P-2).
-- The repository renamed after the domain (D-002). Whether the new name is exactly "bikinibrains.com" or "bikinibrains" is P-5.
+- The repository renamed after the domain (D-002). Done on 2026-09-23: it is now `bikinibrains` (D-006).
 - Recommended: a mock of the first three steps of BB-001 (see below). It isn't an exit criterion, but it is the best evidence to choose a theme with.
 
 ### Validate early with a mock of BB-001
@@ -38,14 +38,12 @@ This is the cheapest test we have. A design system invented without a real lesso
 
 ### Renaming the repository
 
-The owner renames the repository in **Settings → General → Repository name**. Only the owner can do this.
+Done on 2026-09-23: the repository is now `KamaljeetSahoo/bikinibrains` (D-006 in the [decision log](Decision-Log)).
 
-After the rename:
-
-- GitHub redirects the old web address, issue links and Git remote to the new name, so nothing breaks straight away.
-- Links that spell out the old name should still be updated: in `wiki/`, in the issue forms, issue config and pull request template under `.github/`, and in `README.md`, `package.json` and `index.html`. Searching the repository for `A-star-Algorithm` finds them all, including the lower-case GitHub Pages address.
-- The GitHub Pages address is the exception. The current visualiser at kamaljeetsahoo.github.io/A-star-Algorithm/ is not redirected, and moves to an address under the new name. That matters little once the custom domain goes live in Phase 3.
-- Nobody should create a new repository called A-star-Algorithm under the same account, because that would stop the redirects working.
+- GitHub redirects the old web address, issue links, wiki and Git remote from `A-star-Algorithm`, so older links keep working.
+- Links in the repository that spelled out the old name were updated in the same change: `wiki/`, the issue forms, issue config and pull request template under `.github/`, `README.md`, `package.json` and `index.html`.
+- The GitHub Pages address is the exception. The visualiser moved from kamaljeetsahoo.github.io/A-star-Algorithm/, which no longer answers, to kamaljeetsahoo.github.io/bikinibrains/. That matters little once the custom domain goes live.
+- Nobody should create a new repository called `A-star-Algorithm` under the same account, because that would stop the redirects working.
 
 ### Exit criteria
 
@@ -53,7 +51,7 @@ After the rename:
 - [ ] The first three lessons after BB-001 are chosen (P-3).
 - [ ] A theme direction is chosen in Claude Design (D-005 confirmed or replaced).
 - [ ] A licence for lesson content is chosen (P-2).
-- [ ] The repository is renamed (P-5).
+- [x] The repository is renamed (D-006).
 
 ## Phase 1: Design system v0
 
@@ -130,17 +128,17 @@ Every task on the roadmap carries exactly one `phase:*` label. Each phase has an
 
 These filters show the roadmap as it stands:
 
-- Phase 0, open: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A0-foundation
-- Phase 1, open: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A1-design-system
-- Phase 2, open: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A2-lesson-bb001
-- Phase 3, open: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A3-launch
-- The epics: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+label%3Aepic
-- Waiting on the owner: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Aneeds-owner
-- Open decisions: https://github.com/KamaljeetSahoo/A-star-Algorithm/issues?q=is%3Aissue+is%3Aopen+label%3Adecision
+- Phase 0, open: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A0-foundation
+- Phase 1, open: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A1-design-system
+- Phase 2, open: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A2-lesson-bb001
+- Phase 3, open: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Aphase%3A3-launch
+- The epics: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+label%3Aepic
+- Waiting on the owner: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Aneeds-owner
+- Open decisions: https://github.com/KamaljeetSahoo/bikinibrains/issues?q=is%3Aissue+is%3Aopen+label%3Adecision
 
 To see what is finished in a phase, change `is%3Aopen` to `is%3Aclosed`.
 
-These links use the repository's current name. GitHub redirects them after the rename, and we will update them to the new name when it happens.
+These links use the repository's name since the rename. Links using the old name, A-star-Algorithm, are redirected by GitHub.
 
 ## Changing the roadmap
 

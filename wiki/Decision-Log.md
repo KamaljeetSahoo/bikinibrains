@@ -12,11 +12,11 @@ This page records the choices that shape bikinibrains: what was decided, why, an
 | D-003 | Planning in the open: wiki for docs, issues for work | Accepted |
 | D-004 | Private references are never named in public | Accepted |
 | D-005 | Working visual direction: the engineering drawing | Proposed |
+| D-006 | Repository name: bikinibrains (was P-5) | Accepted |
 | P-1 | Default paper | Owner's call |
 | P-2 | Licence for lesson content | Owner's call |
 | P-3 | First three lessons after BB-001 | Owner's call |
 | P-4 | Analytics | Owner's call |
-| P-5 | Repository name | Owner's call |
 
 **Statuses.** *Proposed* means it is our working assumption, but not yet confirmed. *Accepted* means it is in force. *Superseded* means a later decision replaced it, and the entry names which one. We never delete or rewrite an accepted decision. If we change our minds, a new entry supersedes it, so the history stays readable.
 
@@ -107,6 +107,22 @@ Two things are not affected by this rule. Published learning-science research is
 - Some things are still open: which paper readers see first (P-1), how much texture to use, the typefaces, and how subjects that aren't grids are illustrated. See [visual direction](Visual-Direction).
 - The direction is confirmed or changed in Claude Design, ideally after trying it on a mock of BB-001's first three steps.
 
+
+### D-006 Repository name: bikinibrains
+
+- **Status:** Accepted
+- **Date:** 2026-09-23
+
+**Context.** D-002 decided to rename the repository after the domain, and P-5 asked whether the name should be exactly "bikinibrains.com" or "bikinibrains".
+
+**Decision.** The repository is `KamaljeetSahoo/bikinibrains`. The owner renamed it on 2026-09-23.
+
+**Consequences.**
+
+- GitHub redirects the old repository, issue, wiki and Git addresses from `A-star-Algorithm`, so older links keep working. Nobody should create a new repository called `A-star-Algorithm` under this account, because that would break the redirects.
+- The GitHub Pages address moved to kamaljeetsahoo.github.io/bikinibrains/. The old Pages address is not redirected. Readers will see bikinibrains.com once the custom domain is set.
+- Links that spelled out the old name in the repository and the wiki were updated in the same change.
+
 ## Pending: the owner's call
 
 None of these is decided. Each lists the options and what they cost, so the choice can be made quickly. When one is decided, it moves to the decisions above (see [recording a decision](#recording-a-decision)).
@@ -179,7 +195,7 @@ Other choices will come up as the work goes on, such as how the site is structur
 
 **Owner's call.**
 
-### P-5 Repository name
+### P-5 Repository name (decided: see D-006)
 
 **The question.** What is the repository renamed to? The rename itself is decided (D-002).
 

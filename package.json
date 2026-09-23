@@ -3,10 +3,10 @@
   "version": "2.0.0",
   "private": true,
   "description": "An interactive A* pathfinding visualiser. No dependencies, no build step.",
-  "homepage": "https://kamaljeetsahoo.github.io/A-star-Algorithm/",
+  "homepage": "https://kamaljeetsahoo.github.io/bikinibrains/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KamaljeetSahoo/A-star-Algorithm.git"
+    "url": "https://github.com/KamaljeetSahoo/bikinibrains.git"
   },
   "license": "MIT",
   "keywords": [

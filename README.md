@@ -1,8 +1,8 @@
 > **This repository is becoming bikinibrains:** free, interactive lessons on how technology
 > works, each one a precise drawing you learn by acting on. The A\* visualiser below is where
 > it started, and the working prototype for the first lesson, BB-001. Plans live in the
-> [wiki](https://github.com/KamaljeetSahoo/A-star-Algorithm/wiki) and the work is tracked in
-> [issues](https://github.com/KamaljeetSahoo/A-star-Algorithm/issues).
+> [wiki](https://github.com/KamaljeetSahoo/bikinibrains/wiki) and the work is tracked in
+> [issues](https://github.com/KamaljeetSahoo/bikinibrains/issues).
 
 <div align="center">
 
@@ -10,13 +10,13 @@
 
 **Watch A\* decide where to look next — one cell at a time.**
 
-[![Live demo](https://img.shields.io/badge/demo-live-fbbf24?style=flat-square)](https://kamaljeetsahoo.github.io/A-star-Algorithm/)
+[![Live demo](https://img.shields.io/badge/demo-live-fbbf24?style=flat-square)](https://kamaljeetsahoo.github.io/bikinibrains/)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
 [![Build step](https://img.shields.io/badge/build%20step-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
-[![Tests](https://github.com/KamaljeetSahoo/A-star-Algorithm/actions/workflows/ci.yml/badge.svg)](https://github.com/KamaljeetSahoo/A-star-Algorithm/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/KamaljeetSahoo/A-star-Algorithm?style=flat-square&color=blue)](LICENSE)
+[![Tests](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml/badge.svg)](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/KamaljeetSahoo/bikinibrains?style=flat-square&color=blue)](LICENSE)
 
-### [→ Open the live demo](https://kamaljeetsahoo.github.io/A-star-Algorithm/)
+### [→ Open the live demo](https://kamaljeetsahoo.github.io/bikinibrains/)
 
 <img src="assets/img/demo.gif" alt="A* searching a grid: a bright frontier advances outward, the settled region behind it is shaded by distance travelled, and a gold line snaps into place once the goal is reached." width="560">
 
@@ -181,8 +181,8 @@ into a circle, because nothing is pulling it in any particular direction.
 There is nothing to install.
 
 ```bash
-git clone https://github.com/KamaljeetSahoo/A-star-Algorithm.git
-cd A-star-Algorithm
+git clone https://github.com/KamaljeetSahoo/bikinibrains.git
+cd bikinibrains
 open index.html          # or: xdg-open index.html, or just double-click it
 ```
 

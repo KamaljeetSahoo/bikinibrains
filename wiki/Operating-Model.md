@@ -30,7 +30,7 @@ Free doesn't mean unfinished. Every lesson meets the same [lesson contract](Less
 - **Typefaces.** The faces used in the prototype are free, openly licensed fonts. The [design system](Design-System) proposes hosting them on the site itself, so lessons don't depend on an outside service.
 - **Time.** The real cost is the time of the people making lessons. The rest of this page is mostly about protecting it.
 
-None of this needs a paid GitHub plan once the repository is public. While it is private, the site, the wiki and the Actions minutes rely on the owner's GitHub Pro plan. If that plan ended while the repository was still private, GitHub would stop publishing the site.
+None of this needs a paid GitHub plan once the repository is public. While it is private, the site and the wiki rely on the owner's GitHub Pro plan, and the workflows use the Actions minutes it includes. If that plan ended while the repository was still private, GitHub would stop publishing the site, and the workflows would carry on with GitHub Free's smaller allowance.
 
 Some costs would only appear through a later decision. Examples are an analytics service (P-4) or an outside service for anything a static site can't do by itself. Each would be weighed against staying close to zero, and published if we take it on.
 
@@ -38,7 +38,7 @@ Some costs would only appear through a later decision. Examples are an analytics
 
 We publish what bikinibrains costs to run: what we pay for, and how much. It keeps us honest about "free", and it shows supporters exactly what their help pays for.
 
-*Proposed:* the figures go on a short support and costs page, linked from the about and colophon page, when the site launches in Phase 3. The page says when it was last updated. There is nothing to publish yet beyond the domain.
+*Proposed:* the figures go on a short support and costs page, linked from the about and colophon page, when the site launches in Phase 3. The page says when it was last updated. There is nothing to publish yet beyond the domain. While the repository is private, whether the owner's GitHub Pro plan counts as a bikinibrains cost is the owner's call (#34).
 
 ## No accounts, local progress
 

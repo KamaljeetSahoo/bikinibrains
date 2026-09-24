@@ -103,7 +103,7 @@ These are the owner's to settle. Each is tracked in the [decision log](Decision-
 - **P-3 The first three lessons after BB-001.** The candidates are on the [content map](Content-Map).
 - **P-4 Analytics.** None at all, or privacy-light analytics used only to find where learners get stuck.
 - **P-5 Repository name.** Decided: `bikinibrains` (D-006).
-- **P-6 Going public again.** The repository is private for now (D-007). When does it become public again?
+- **P-6 Making the repository public again.** The repository is private for now (D-007). When does it become public again?
 
 Longer-term questions, not yet on the decision log:
 

@@ -1,4 +1,4 @@
-> **Status: Draft v0.** The source of truth will move to Claude Design. Once the owner has chosen there, the tokens and components will be exported back to the repository and to this page. Until then, every value below is taken from the private BB-001 prototype as it stood on 2026-09-23. Anything marked *proposed* is a suggestion for Phase 1, not a decision.
+> **Status: Draft v0.** The source of truth will move to Claude Design. Once the owner has chosen there, the tokens and components will be exported back to the repository and to this page. Until then, every value below is taken from the private BB-001 prototype as it stood on 23 September 2026. Anything marked *proposed* is a suggestion for Phase 1, not a decision.
 
 This page records the values behind the [visual direction](Visual-Direction): colours, type, spacing, line types and components, plus the accessibility rules they must meet. It is written for whoever builds or reviews a lesson, and for the owner choosing in Claude Design.
 

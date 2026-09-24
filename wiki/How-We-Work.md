@@ -16,21 +16,21 @@ Every page in this wiki is a Markdown file in the repository's `wiki/` folder. N
 
 **File names become page names.** GitHub turns hyphens into spaces, so `Lesson-Contract.md` becomes the page "Lesson Contract". Link between pages with the file name and no `.md` suffix, for example `[Lesson contract](Lesson-Contract)`. Two files are special: `_Sidebar.md` is the navigation on every page, and `_Footer.md` is the line at the bottom.
 
-**One-time set-up (done).** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. On 2026-09-23 the owner saved a first page, and the first publish replaced it. On 2026-09-24 the owner ticked "Restrict editing to collaborators only" under **Settings → General → Features → Wikis** (#38). It matters most once the repository is public again, because it keeps changes coming through pull requests.
+**One-time set-up (done).** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. On 23 September 2026 the owner saved a first page, and the first publish replaced it. On 24 September 2026 the owner ticked "Restrict editing to collaborators only" under **Settings → General → Features → Wikis** (#38). It matters most once the repository is public again, because it stops people outside the project editing the wiki directly, so their changes come through pull requests.
 
 **Status banners.** A page that is still a draft opens with a status note, such as "Proposed" or "Draft v0". When the owner signs a page off, the banner changes in a pull request, and any decision it contains goes into the decision log in the same pull request.
 
 **How to write.** Plain, direct and warm. Sentence case for headings, British spelling, and no emoji. Use a table only when it compares things. [Voice and writing](Voice-and-Writing) has the full guide.
 
-**What we never name.** The repository, the wiki and the issues are private for now (D-007), but write as if they were public: if the repository opens again, every commit, the wiki's history and every issue open with it. Commercial products used as private inspiration are never named, linked or recognisably described in any of them (D-004). Describe our principles in our own words. Research is cited by author and year, and prior art we build on is credited by name, such as Red Blob Games for A\*.
+**What we never name.** The repository, the wiki and the issues are private for now (D-007), but write as if they were public. If the repository becomes public again, every commit, the wiki's history and every issue and comment become public with it. Commercial products used as private inspiration are never named, linked or recognisably described in any of them (D-004). Describe our principles in our own words. Research is cited by author and year, and prior art we build on is credited by name, such as Red Blob Games for A\*.
 
 ## Issues
 
-Issues hold the work. Each issue has **labels** that place it on the roadmap, and belongs to one of three kinds of work.
+Issues hold the work. Each issue has **labels** that place it on the roadmap, and is one of three **kinds of work**.
 
-### Types
+### Kinds of work
 
-GitHub records issue types only on repositories that belong to an organisation. This one belongs to a personal account, so setting a type has no effect here. The three kinds below still describe the work, and an issue form names the one it is for.
+GitHub calls these issue types, but it records them only on repositories that belong to an organisation. This one belongs to a personal account, so setting one has no effect here. The three kinds below still describe the work, and the list of issue forms further down gives each form's kind in brackets.
 
 - **Feature:** a larger body of work, such as a phase epic, the set-up epic or a new lesson. Its tasks are attached as sub-issues.
 - **Task:** a single piece of work that one person can finish.
@@ -165,7 +165,7 @@ For pull requests that aren't lessons, the pull request template's shorter check
 ## Where things live
 
 - `wiki/`: the source of every wiki page.
-- `_config.yml`: what GitHub Pages publishes. Only the demo is listed, and anything not listed stays off the public site.
+- `_config.yml`: what GitHub Pages publishes. Only the demo is listed. A test (`tests/pages.test.js`) fails if a new top-level file would slip onto the site, or if the demo loads a file the site would leave off.
 - `.github/labels.json`: the label set.
 - `.github/ISSUE_TEMPLATE/`: the issue forms.
 - `.github/pull_request_template.md`: the pull request checklist.

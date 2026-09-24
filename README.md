@@ -15,7 +15,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
 [![Build step](https://img.shields.io/badge/build%20step-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
 [![Tests](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml/badge.svg)](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Licence](https://img.shields.io/badge/licence-MIT-blue?style=flat-square)](LICENSE)
 
 ### [→ Open the live demo](https://kamaljeetsahoo.github.io/bikinibrains/)
 
@@ -271,6 +271,6 @@ from there.
 The algorithm itself is due to Hart, Nilsson and Raphael, *A Formal Basis for the
 Heuristic Determination of Minimum Cost Paths* (1968).
 
-## License
+## Licence
 
 [MIT](LICENSE) © Kamaljeet Sahoo

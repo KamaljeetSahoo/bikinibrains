@@ -1,4 +1,4 @@
-> **Status: the plan as of 23 September 2026.** The phases and their exit criteria are set by the owner. Phase 0 has a suggested time-box, and BB-001 in Phase 2 takes the time-box for a flagship lesson. Phases 1 and 3 get theirs when we know enough to set them honestly.
+> **Status: the plan as of 24 September 2026.** The phases and their exit criteria are set by the owner. Phase 0 has a suggested time-box, and BB-001 in Phase 2 takes the time-box for a flagship lesson. Phases 1 and 3 get theirs when we know enough to set them honestly.
 
 We work in four phases, then settle into a steady pace of new lessons. Each phase ends when its exit criteria are true, not on a date.
 
@@ -27,7 +27,7 @@ After launch: one flagship lesson every one to two months, with small, time-boxe
 - The first three lessons after BB-001 chosen from the content map (P-3 in the [decision log](Decision-Log)).
 - A theme direction chosen in Claude Design. This confirms or changes the working direction, the engineering drawing (D-005). Which paper readers see first (P-1) can be explored at the same time, but it isn't an exit criterion.
 - A licence for lesson content (P-2).
-- The repository renamed after the domain (D-002). Done on 2026-09-23: it is now `bikinibrains` (D-006).
+- The repository renamed after the domain (D-002). Done on 23 September 2026: it is now `bikinibrains` (D-006).
 - Recommended: a mock of the first three steps of BB-001 (see below). It isn't an exit criterion, but it is the best evidence to choose a theme with.
 
 ### Validate early with a mock of BB-001
@@ -38,7 +38,7 @@ This is the cheapest test we have. A design system invented without a real lesso
 
 ### Renaming the repository
 
-Done on 2026-09-23: the repository is now `KamaljeetSahoo/bikinibrains` (D-006 in the [decision log](Decision-Log)).
+Done on 23 September 2026: the repository is now `KamaljeetSahoo/bikinibrains` (D-006 in the [decision log](Decision-Log)).
 
 - GitHub redirects the old web address, issue links, wiki and Git remote from `A-star-Algorithm`, so older links keep working for anyone who can see the repository.
 - Links in the repository that spelled out the old name were updated in the same change: `wiki/`, the issue forms, issue config and pull request template under `.github/`, `README.md`, `package.json` and `index.html`.
@@ -47,11 +47,11 @@ Done on 2026-09-23: the repository is now `KamaljeetSahoo/bikinibrains` (D-006 i
 
 ### Keeping the repository private for now
 
-On 2026-09-24 the owner decided to make the repository private for now (D-007 in the [decision log](Decision-Log)). The code, the wiki and the issues are open only to the owner and collaborators until it opens again, and when that happens is the owner's call (P-6).
+On 24 September 2026 the owner decided to make the repository private for now (D-007 in the [decision log](Decision-Log)). The code, the wiki and the issues are open only to the owner and collaborators until it opens again, and when that happens is the owner's call (P-6, #45). The switch itself and the checks after it are tracked in #44.
 
-- The site on GitHub Pages stays public, but it publishes only the demo. `_config.yml` leaves everything else out, including `wiki/`.
+- The site on GitHub Pages stays public, but it publishes only the demo. `_config.yml` leaves everything else out, including `wiki/`, and a test checks it.
 - The demo's links to the repository are removed until it is public again.
-- While the repository is private, Pages, the wiki and the Actions minutes rely on the owner's GitHub Pro plan.
+- While the repository is private, Pages and the wiki rely on the owner's GitHub Pro plan, and the workflows use the Actions minutes it includes.
 
 ### Exit criteria
 
@@ -116,7 +116,7 @@ Real lesson content drives every component. The BB-001 mock from Phase 0 is the 
 
 The analytics question (P-4) isn't needed for Phase 0. Its decision issue sits in Phase 3, so that it is answered before launch.
 
-*Proposed:* answer P-6, when the repository becomes public again, before launch too. The about page, the support page and how readers report a bug all depend on it.
+*Proposed:* P-6, the question of when the repository becomes public again, is answered before launch too. The about page, the support page and how readers report a bug all depend on the answer.
 
 ### Exit criteria
 

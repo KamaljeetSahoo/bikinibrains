@@ -1,9 +1,12 @@
-# GitHub Pages builds this repository with Jekyll. Only the demo belongs on the
-# public site, so everything is left out except what is listed under include.
+# GitHub Pages builds this repository with Jekyll and publishes the result even
+# while the repository is private (D-007). Only the demo belongs on the public
+# site, so everything is left out except what is listed under include.
 # Jekyll matches include against each entry's own name, so the folders the page
-# uses are listed, then the kinds of file it loads from them. Anything else,
-# including a new top-level file or folder, stays off the site until it is added
-# here. The plans in wiki/ and the rest of the repository are private (D-007).
+# uses are listed, then the kinds of file it loads from them. That lets through
+# a little more than it seems: any .css or .js file at the top level, and any
+# top-level name that starts with a listed one, such as src-old. Keep files like
+# those out of the root: tests/pages.test.js fails if one appears, and also if
+# the demo loads a file this list would leave off.
 exclude: ["*"]
 include:
   - index.html

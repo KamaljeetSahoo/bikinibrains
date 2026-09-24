@@ -15,7 +15,7 @@ The full rules are in `wiki/How-We-Work.md`.
 
 ## Write as if the repository were public
 
-It is private for now, but if it opens again every commit, the wiki's history and every issue open with it.
+It is private for now. If it becomes public again, every commit, the wiki's history and every issue and comment become public with it.
 
 - Never name, link or recognisably describe the commercial products we use as private design references. That applies to code, commits, the wiki and issues. Those references live only in the owner's private design pack.
 - Write the way `wiki/Voice-and-Writing.md` describes: plain and warm, British spelling, sentence-case headings and no emoji.
@@ -28,4 +28,4 @@ Run `npm run check` (the engine tests and the contrast audit) before pushing. CI
 
 Work on a branch. Merging into `master` publishes the wiki, syncs the labels and redeploys GitHub Pages, so merge only when the owner says to.
 
-The Pages site is public even while the repository is private. `_config.yml` lists what it publishes, which is only the demo. A file the site needs must be added there; everything else stays off it.
+The Pages site is public even while the repository is private. `_config.yml` lists what it publishes, which is only the demo, and a file the site needs must be added there. Jekyll also lets through any `.css` or `.js` file at the top level and any top-level name that starts with a listed one, so keep files like a tool's `eslint.config.js` out of the root. `tests/pages.test.js` fails if one appears.

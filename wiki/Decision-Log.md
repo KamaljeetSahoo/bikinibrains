@@ -62,7 +62,7 @@ This page records the choices that shape bikinibrains: what was decided, why, an
 
 - **Status:** Accepted
 - **Date:** 2026-09-23
-- **See also:** D-007. The repository is private for now, so the wiki and the issues are open only to the owner and collaborators, and this entry's last consequence is on hold until it opens again. Everything else here still holds.
+- **See also:** D-007. The repository is private for now, so the wiki and the issues are open only to the owner and collaborators, and this entry's last consequence is on hold until it becomes public again. Separately, GitHub doesn't record issue types on a repository that belongs to a personal account, so Feature, Task and Bug are kinds of work the issue forms name, not a type set on each issue (see [how we work](How-We-Work#kinds-of-work)).
 
 **Context.** The repository is public. The plan needs one place that newcomers can read and the owner can decide from, and the work needs to be visible and trackable. Documents that are edited without review drift, and nobody can see why they changed.
 
@@ -117,6 +117,7 @@ Two things are not affected by this rule. Published learning-science research is
 - **Status:** Accepted
 - **Date:** 2026-09-23
 - **Issue:** #39 (was P-5)
+- **See also:** D-007. While the repository is private, the redirects from `A-star-Algorithm` work only for the owner and collaborators. Everyone else sees "page not found".
 
 **Context.** D-002 decided to rename the repository after the domain, and P-5 asked whether the name should be exactly "bikinibrains.com" or "bikinibrains".
 
@@ -132,9 +133,9 @@ Two things are not affected by this rule. Published learning-science research is
 
 - **Status:** Accepted
 - **Date:** 2026-09-24
-- **Issue:** #ISSUE_PRIVATE
+- **Issue:** #44
 
-**Context.** Since D-003 the repository, the wiki and the issues have been public. On 2026-09-24 the owner decided to make the repository private for now. When it becomes public again is still open (P-6).
+**Context.** Since D-003 the repository, the wiki and the issues have been public. On 24 September 2026 the owner decided to make the repository private for now. When it becomes public again is still open (P-6).
 
 **Decision.** The repository, and with it the wiki and the issues, is private for now. Only the owner and the collaborators they invite can see it. The site on GitHub Pages stays public and publishes only the demo.
 
@@ -142,11 +143,12 @@ Two things are not affected by this rule. Published learning-science research is
 
 - The way we work doesn't change. The wiki holds the living documents, issues hold the work, and every change goes through a pull request (D-003). Only the audience is smaller.
 - Nobody outside the project can read the wiki, open an issue or send a pull request. Links to the repository, the wiki or the issues, old `A-star-Algorithm` links included, show "page not found" to anyone who isn't a collaborator.
-- A GitHub Pages site stays public even when its repository is private, and Pages builds the whole of `master`. So `_config.yml` lists what the site publishes: `index.html`, the stylesheet, the scripts in `src/` and the licence. Anything not listed, including `wiki/`, stays off the site. The demo's links to the repository are removed until it opens again.
-- Pages and the wiki work in a private repository only because the owner's account is on GitHub Pro. If the account moved to GitHub Free while the repository was private, GitHub would unpublish the site. Actions runs now count against the 3,000 minutes a month that Pro includes.
-- GitHub's secret scanning and push protection only cover public repositories, so nothing stops a password or token committed by mistake. Keep secrets out of commits.
-- D-004 applies in full. If the repository opens again, its whole history opens with it: every commit, the wiki's history, and every issue and comment.
-- Changing visibility erases a repository's stars and watchers. There are none to lose, but the owner should check afterwards that they are still watching it.
+- A GitHub Pages site stays public even when its repository is private, and Pages builds the whole of `master`. So `_config.yml` lists what the site publishes: `index.html`, the stylesheet, the scripts in `src/` and the licence. Everything else, including `wiki/`, stays off the site. A test (`tests/pages.test.js`) fails if a new top-level file would slip onto the site, or if the demo loads a file the site would leave off. The demo's links to the repository are removed until it is public again.
+- Pages and the wiki work in a private repository only because the owner's account is on GitHub Pro. If the account moved to GitHub Free while the repository was private, GitHub would unpublish the site. Our own workflows (the tests and contrast audit, the label sync and the wiki publishing) now count against the 3,000 minutes of GitHub Actions a month that Pro includes. The runs that build the Pages site stay free.
+- On GitHub Pro, secret scanning and push protection cover only public repositories, so nothing now stops a password or token committed by mistake. Keep secrets out of commits.
+- D-004 applies in full. If the repository becomes public again, its whole history becomes public with it: every commit, the wiki's history, every issue and pull request with their comments, and the logs of past workflow runs.
+- The Phase 3 exit criterion "No account is needed for anything" on the [roadmap](Roadmap) now reads "No account is needed for anything on the site", and #4 says the same. While the repository is private, reading the plan needs a GitHub account the owner has invited, so the promise covers the site.
+- Changing visibility erases a repository's stars and watchers, now and again if it is made public. There are no stars to lose, and the only watcher is the owner. Watching is what sends notifications about new issues and pull requests, so after each change the owner should check the Watch button and turn it back on if it has gone.
 
 ## Pending: the owner's call
 
@@ -222,17 +224,17 @@ Other choices will come up as the work goes on, such as how the site is structur
 
 ### P-6 Making the repository public again
 
-**The question.** The repository is private for now (D-007). When does it become public again?
+**The question.** The repository is private for now (D-007). When does it become public again? The decision issue is #45.
 
 | Option | For | Against |
 |---|---|---|
 | Before launch | People outside the project can follow the plan, report problems and propose lessons before the site opens. | The plan is public while it is still changing. |
 | At launch | The site, its source and the plan open on the same day, so the about page can link to the source. | Until then, only collaborators can report a problem or help. |
-| After launch | The plan stays private for longer. | Readers of the live site can't open an issue or see the source, so the support page needs another way to report a bug. The case for contributions in P-2 waits too. |
+| After launch | The plan stays private for longer. | Readers of the live site can't open an issue or see the source, so the support page needs another way to report a bug. Volunteer translations and other contributions, which P-2 weighs in choosing a licence, can't reach us through the repository either. |
 
-**Either way:** before it opens, check the whole Git history, the wiki's history and every issue for anything D-004 rules out, because all of it becomes public at once. Then put back the demo's links to the repository, restore the parts of these pages that are on hold while it is private, and check that the wiki still restricts editing to collaborators.
+**Either way:** before it opens, check the whole Git history, the wiki's history, every issue and pull request with their comments, and the logs of past workflow runs for anything D-004 rules out, because all of it becomes public at once. Then put back the demo's links to the repository (the GitHub button in the header, and "How it works" and "Source" in the footer), and update every passage that says the repository is private or that something waits until it is public again: in the wiki, the README, `CLAUDE.md`, the comment in `_config.yml` and the open issues. D-007 itself stays as it is, because the decision that answers P-6 supersedes it. Keep `_config.yml`: the site should publish only what it needs either way. Finally, check that the wiki still restricts editing to collaborators, and that the owner is still watching the repository.
 
-**When:** before launch, because the about page, the support page and how readers report a bug depend on the answer.
+**When:** the [roadmap](Roadmap) proposes answering it before launch, even if the answer is "after launch", because the about page, the support page and how readers report a bug depend on it.
 
 **Owner's call.**
 
@@ -245,6 +247,8 @@ Other choices will come up as the work goes on, such as how the site is structur
 5. **Close the issue** and link it from the entry.
 
 To change an accepted decision, add a new entry that supersedes it. Then set the old entry's status to "Superseded by D-0NN" and leave the rest of it as it was.
+
+If a later decision only changes how an accepted one applies, don't supersede it. Add a **See also** line after the old entry's date that names the new entry and says how it affects the old one, and leave the rest of it as it was.
 
 ### Template for a new decision
 

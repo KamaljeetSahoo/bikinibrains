@@ -16,19 +16,21 @@ Every page in this wiki is a Markdown file in the repository's `wiki/` folder. N
 
 **File names become page names.** GitHub turns hyphens into spaces, so `Lesson-Contract.md` becomes the page "Lesson Contract". Link between pages with the file name and no `.md` suffix, for example `[Lesson contract](Lesson-Contract)`. Two files are special: `_Sidebar.md` is the navigation on every page, and `_Footer.md` is the line at the bottom.
 
-**One-time set-up (done on 2026-09-23).** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. The owner saved a first page, and the first publish replaced it. One step is still the owner's: ticking "Restrict editing to collaborators only" under **Settings → General → Features → Wikis**, so that changes come through pull requests (#38).
+**One-time set-up (done).** GitHub only creates a wiki's storage when its first page is saved, so the workflow fails until one exists. On 2026-09-23 the owner saved a first page, and the first publish replaced it. On 2026-09-24 the owner ticked "Restrict editing to collaborators only" under **Settings → General → Features → Wikis** (#38). It matters most once the repository is public again, because it keeps changes coming through pull requests.
 
 **Status banners.** A page that is still a draft opens with a status note, such as "Proposed" or "Draft v0". When the owner signs a page off, the banner changes in a pull request, and any decision it contains goes into the decision log in the same pull request.
 
 **How to write.** Plain, direct and warm. Sentence case for headings, British spelling, and no emoji. Use a table only when it compares things. [Voice and writing](Voice-and-Writing) has the full guide.
 
-**What never goes on a public page.** The repository, the wiki and the issues are public. Commercial products used as private inspiration are never named, linked or recognisably described in any of them (D-004). Describe our principles in our own words. Research is cited by author and year, and prior art we build on is credited by name, such as Red Blob Games for A\*.
+**What we never name.** The repository, the wiki and the issues are private for now (D-007), but write as if they were public: if the repository opens again, every commit, the wiki's history and every issue open with it. Commercial products used as private inspiration are never named, linked or recognisably described in any of them (D-004). Describe our principles in our own words. Research is cited by author and year, and prior art we build on is credited by name, such as Red Blob Games for A\*.
 
 ## Issues
 
-Issues hold the work. Each issue has one **type**, and **labels** that place it on the roadmap.
+Issues hold the work. Each issue has **labels** that place it on the roadmap, and belongs to one of three kinds of work.
 
 ### Types
+
+GitHub records issue types only on repositories that belong to an organisation. This one belongs to a personal account, so setting a type has no effect here. The three kinds below still describe the work, and an issue form names the one it is for.
 
 - **Feature:** a larger body of work, such as a phase epic, the set-up epic or a new lesson. Its tasks are attached as sub-issues.
 - **Task:** a single piece of work that one person can finish.
@@ -57,7 +59,7 @@ The labels are defined in `.github/labels.json`. The **Sync labels** workflow cr
 
 **Flags.** Add these as they apply.
 
-- `epic`: a phase-sized body of work. Its tasks are sub-issues. Epics use the Feature type.
+- `epic`: a phase-sized body of work. Its tasks are sub-issues.
 - `decision`: a choice to make, with the options and trade-offs written down.
 - `needs-owner`: waiting on the owner's call or sign-off. Remove it once the owner has answered.
 
@@ -70,7 +72,7 @@ A new issue starts from one of four forms. You can also open a blank issue.
 - **Decision** (Task, `decision` and `needs-owner`): a choice to be made and recorded in the decision log.
 - **Bug** (Bug): something broken, something that teaches the wrong thing, an accessibility problem, or a layout that fails on a screen size.
 
-The form sets the type and the first labels. Add the phase label, and any other area labels, when the issue is triaged.
+The form sets the first labels. Add the phase label, and any other area labels, when the issue is triaged.
 
 ### Working an issue
 
@@ -139,7 +141,7 @@ A reviewer then checks the lesson against this list, most of which comes from th
 - [ ] Five people who didn't know the topic have done the lesson, thinking aloud, and answered the same three questions before and after it.
 - [ ] Fixes have been made wherever people had to guess.
 
-**Credit and public hygiene**
+**Credit and what we never name**
 
 - [ ] Prior art we built on is credited on the sheet.
 - [ ] Nothing names, links or recognisably describes the products we keep as private references.
@@ -158,11 +160,12 @@ For pull requests that aren't lessons, the pull request template's shorter check
 - **Commit messages** start with a short line in the imperative that says what the commit does, such as "Add feedback for the diagonal misconception". Then a blank line, then a few sentences on why. Look at the repository's history for examples.
 - **Keep commits focused.** Don't mix a design-system change with lesson copy, for example.
 
-*Proposed:* a branch protection rule on `master` that requires CI to pass before merging, so the rule is enforced rather than remembered.
+*Proposed:* a branch protection rule on `master` that requires CI to pass before merging, so the rule is enforced rather than remembered. While the repository is private, this relies on the owner's GitHub Pro plan.
 
 ## Where things live
 
 - `wiki/`: the source of every wiki page.
+- `_config.yml`: what GitHub Pages publishes. Only the demo is listed, and anything not listed stays off the public site.
 - `.github/labels.json`: the label set.
 - `.github/ISSUE_TEMPLATE/`: the issue forms.
 - `.github/pull_request_template.md`: the pull request checklist.

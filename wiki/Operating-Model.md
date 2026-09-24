@@ -1,11 +1,11 @@
-> **Status.** Free forever (D-001) and static hosting (D-002) are decided. The licence for lesson content (P-2) and analytics (P-4) are still the owner's call. Anything marked *Proposed* on this page is a suggestion awaiting sign-off. All of these are tracked in the [decision log](Decision-Log).
+> **Status.** Free forever (D-001) and static hosting (D-002) are decided. The repository is private for now (D-007), which changes what hosting relies on: see [what it costs](#what-it-costs). The licence for lesson content (P-2) and analytics (P-4) are still the owner's call. Anything marked *Proposed* on this page is a suggestion awaiting sign-off. All of these are tracked in the [decision log](Decision-Log).
 
 This page explains how bikinibrains stays free without wearing out the people who make it. Free projects are usually ended by scope creep and burnout, not by a bad idea: the work grows faster than the time available, or nobody can keep up with maintenance. This page is how we try to avoid that.
 
 ## The short version
 
 - **Free forever.** No paywall, no advertising, no daily limit, and no account needed to learn (D-001).
-- **Near-zero fixed costs.** A static site on GitHub Pages. The domain is the main cost (D-002).
+- **Near-zero fixed costs.** A static site on GitHub Pages. The domain is the main cost (D-002). While the repository is private, hosting also relies on the owner's GitHub Pro plan (D-007).
 - **No accounts.** Progress lives in your own browser.
 - **One request for support**, made when you finish a lesson and never before you start.
 - **Costs in the open.** We publish what the site costs.
@@ -23,14 +23,14 @@ Free doesn't mean unfinished. Every lesson meets the same [lesson contract](Less
 
 ## What it costs
 
-- **Hosting.** GitHub Pages serves the site from the repository at no charge.
-- **Automation.** The tests, the contrast audit, the label sync and the wiki publishing run on GitHub Actions, which has no charge for public repositories on GitHub's standard runners.
-- **Wiki and issues.** Both are included with a public repository.
+- **Hosting.** GitHub Pages serves the site from the repository. For a public repository that costs nothing. While ours is private (D-007), Pages works only because the owner's account is on GitHub Pro. The site itself stays public.
+- **Automation.** The tests, the contrast audit, the label sync and the wiki publishing run on GitHub Actions. Public repositories use GitHub's standard runners at no charge. While ours is private, each run counts against the 3,000 minutes a month included in the owner's GitHub Pro plan, far more than these runs need today.
+- **Wiki and issues.** Issues come with every repository. A wiki comes free with a public repository; while ours is private, the wiki also relies on the owner's GitHub Pro plan.
 - **The domain.** bikinibrains.com is renewed every year. It is the main running cost.
 - **Typefaces.** The faces used in the prototype are free, openly licensed fonts. The [design system](Design-System) proposes hosting them on the site itself, so lessons don't depend on an outside service.
 - **Time.** The real cost is the time of the people making lessons. The rest of this page is mostly about protecting it.
 
-None of this needs a paid GitHub plan.
+None of this needs a paid GitHub plan once the repository is public. While it is private, the site, the wiki and the Actions minutes rely on the owner's GitHub Pro plan. If that plan ended while the repository was still private, GitHub would stop publishing the site.
 
 Some costs would only appear through a later decision. Examples are an analytics service (P-4) or an outside service for anything a static site can't do by itself. Each would be weighed against staying close to zero, and published if we take it on.
 
@@ -69,7 +69,7 @@ The licence for lesson content is pending (P-2). The choice is between:
 - **CC BY 4.0**, which lets anyone translate, adapt and reuse the lessons with credit, including commercially; or
 - **CC BY-NC 4.0**, which blocks commercial reuse, but is likely to attract fewer contributions.
 
-An open content licence invites volunteer translations, and translations let a free project reach people it otherwise couldn't. The trade-offs are set out in full in the [decision log](Decision-Log#p-2-licence-for-lesson-content).
+An open content licence invites volunteer translations, and translations let a free project reach people it otherwise couldn't. While the repository is private (D-007), translations can't be sent to us through it, so that benefit waits until it is public again. The trade-offs are set out in full in the [decision log](Decision-Log#p-2-licence-for-lesson-content).
 
 ## How we use AI
 
@@ -115,4 +115,4 @@ A lesson is only free for as long as it works. These rules keep it working:
 | Funding | The project depends on money it doesn't have. | Fixed costs close to zero by design, so bikinibrains keeps running without donations. Costs are published. We ask once, at the end of a lesson. |
 | Bit-rot | Lessons stop working as browsers, tools and dependencies change around them. | No build chain and no dependencies. Plain files that could move to any static host. Core content that reads without JavaScript. Automated checks on every change. |
 
-If a risk starts to show, for example if lessons keep running past their time-box, the fix is to adjust the plan in the open: an issue, and an entry in the [decision log](Decision-Log) if it changes a decision. Quietly working harder is not the fix.
+If a risk starts to show, for example if lessons keep running past their time-box, the fix is to adjust the plan on the record: an issue, and an entry in the [decision log](Decision-Log) if it changes a decision. Quietly working harder is not the fix.

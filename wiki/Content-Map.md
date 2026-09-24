@@ -20,7 +20,7 @@ Drawing numbers run BB-001, BB-002 and so on. "BB" stands for bikinibrains. A nu
 
 The question titles are drafts, written to the rules in [Voice and writing](Voice-and-Writing). The question is in the learner's own words. The technical name, shown in the Subject column, becomes the lesson's subtitle.
 
-**About BB-001.** There is a working prototype that draws A* search as an engineering sheet. It has both papers, the drafting line grammar, a g + h = f callout and a title block with live figures. It is private for now and available from the owner. It is still a visualiser, not yet a lesson. It plays by itself, asks no questions, gives no feedback and shows √2 and decimals before anyone has asked for them. Phase 2 on the [roadmap](Roadmap) turns it into a guided lesson that meets the lesson contract.
+**About BB-001.** There is a working prototype that draws A* search as an engineering sheet. It has both papers, the drafting line grammar, a g + h = f callout and a title block with live figures. It is kept outside this repository and is available from the owner. It is still a visualiser, not yet a lesson. It plays by itself, asks no questions, gives no feedback and shows √2 and decimals before anyone has asked for them. Phase 2 on the [roadmap](Roadmap) turns it into a guided lesson that meets the lesson contract.
 
 ### What "drawn as" means
 
@@ -74,7 +74,7 @@ Every proposed lesson is checked against five criteria:
 ## From idea to register
 
 1. **Propose it.** Open a [lesson proposal](https://github.com/KamaljeetSahoo/bikinibrains/issues/new?template=lesson-proposal.yml) issue. The form asks for the question in the learner's words, the technical subject, and what the learner draws or acts on. It also asks for the convention it would be drawn in, the "aha" in one sentence, the wrong answers you expect people to give, and any prior art to learn from and credit. Tick the five criteria the form lists. If you can, add a 0 to 2 score for each criterion in a comment, and say who could check the lesson for correctness.
-2. **Talk it through.** The proposal is discussed on the issue under the `area:content` label, and anyone can comment. When it's ready for a decision, it gets the `needs-owner` label.
+2. **Talk it through.** The proposal is discussed on the issue under the `area:content` label, and anyone who can see the repository can comment. While it is private (D-007), that means the owner and collaborators. When it's ready for a decision, it gets the `needs-owner` label.
 3. **The owner decides.** If the answer is yes, the lesson takes the next free BB number and joins the register as Proposed. If the answer is not now, the issue is closed as not planned with a one-line reason, so the idea stays findable and can be reopened.
 4. **It is scheduled.** When a lesson is picked for work, its proposal issue becomes the parent of that lesson's tasks, which are attached as sub-issues (see [How we work](How-We-Work)). Its status here changes to In progress.
 5. **It is published** once it meets the definition of done in the [lesson contract](Lesson-Contract).

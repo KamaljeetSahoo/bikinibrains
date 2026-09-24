@@ -17,7 +17,7 @@ No prior technical knowledge is assumed, and nothing is dumbed down. There is no
 What exists today:
 
 - **An A\* visualiser.** The code in this repository draws A\* search on a grid. It is plain JavaScript with no build step and no dependencies, and it comes with tests and a colour-contrast audit. Its search code is a starting point for the first lesson, BB-001.
-- **A private prototype of BB-001**, drawn as an engineering sheet. It is available from the owner and is not public yet.
+- **A prototype of BB-001**, drawn as an engineering sheet. It is kept outside this repository and is available from the owner.
 
 To be honest about the gap: neither is a lesson yet. The prototype plays by itself, asks no questions, gives no feedback and shows √2 and decimals on first sight. The [lesson contract](Lesson-Contract) describes what it has to become, and the [roadmap](Roadmap) says when.
 
@@ -38,6 +38,8 @@ Read the pages in this order. The first three explain the idea; the rest explain
 11. [How we work](How-We-Work): the wiki, issues, labels and the design loop.
 
 ## Get involved
+
+The repository is private for now (D-007 in the [decision log](Decision-Log)), so only the owner and the people they have invited can see the issues, the pull requests and this wiki. If you can read this page, you are one of them, and everything below is open to you.
 
 - **Report a problem or suggest an improvement** by opening an issue in the repository's [Issues tab](https://github.com/KamaljeetSahoo/bikinibrains/issues).
 - **Suggest a lesson.** The best ideas are questions many people actually ask, about something that can be drawn and acted on, with one clear "aha" inside 15 minutes. The [content map](Content-Map) explains how to propose one.

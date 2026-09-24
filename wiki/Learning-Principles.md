@@ -104,7 +104,7 @@ These claims are common in education marketing. We don't make them on sheets, on
 - **Bloom's "2 sigma" as a promise.** Bloom (1984) described the large benefit of one-to-one tutoring as a problem to work on, not a result anyone could buy. Later research has generally found smaller effects. We don't promise tutor-level results.
 - **Learning styles.** The idea that people learn best when teaching matches their "visual" or "auditory" style isn't supported by the evidence (Pashler, McDaniel, Rohrer and Bjork, 2008). We draw because the subjects are spatial, not because some people are "visual learners".
 - **The "learning pyramid".** The familiar chart saying we remember 10% of what we read and 90% of what we teach has no traceable research behind its percentages.
-- **"Built by experts from [famous university]".** We don't borrow authority. We show our work instead: these principles, how each lesson was tested, and who reviewed it.
+- **"Built by experts from [famous university]".** We don't borrow authority. We show our work instead, on the site where readers can see it: the principles we teach by, how each lesson was tested, and who reviewed it.
 
 ## How we check a lesson against these
 

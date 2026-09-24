@@ -66,7 +66,7 @@ These are the things that would tell us the idea is working. None of them has a 
 - After launch, new lessons arrive at a steady pace the people making them can keep up: roughly one flagship lesson every one to two months, with small notes in between.
 - People come back to finished sheets as references, and link to them.
 - Running costs stay close to zero, and we publish them.
-- People outside the project start to help, with corrections, lesson questions and, if the content licence allows it, translations.
+- Once the repository is public again (D-007), people outside the project start to help, with corrections, lesson questions and, if the content licence allows it, translations.
 
 **Signals we can count.** We haven't set targets for any of these, and we won't invent them before we have a baseline. The first lessons are for finding out which signals tell us something useful.
 
@@ -77,7 +77,7 @@ These are the things that would tell us the idea is working. None of them has a 
 | Lessons completed | Whether people stay to the end | Only with privacy-light analytics (P-4, not decided) |
 | Predictions answered, and which wrong answers are common | Where learners get stuck, and which feedback to improve | Only with privacy-light analytics (P-4, not decided) |
 | Practice sheets returned to | Whether spaced practice works without accounts | Only with privacy-light analytics (P-4, not decided) |
-| Issues and pull requests from outside the project | Whether other people find it worth improving | GitHub |
+| Issues and pull requests from outside the project | Whether other people find it worth improving | GitHub, once the repository is public again (D-007) |
 | Monthly running cost | Whether free stays affordable | The costs we publish |
 
 If the owner decides against analytics, the counted signals come from the tests and from what people tell us, and that is enough to start.
@@ -99,10 +99,11 @@ If the owner decides against analytics, the counted signals come from the tests 
 These are the owner's to settle. Each is tracked in the [decision log](Decision-Log).
 
 - **P-1 Default paper.** Should sheets open on whiteprint, on blueprint, or follow the reader's light or dark setting?
-- **P-2 Licence for lesson content.** CC BY 4.0 invites translation and reuse; CC BY-NC 4.0 blocks commercial reuse but is likely to attract fewer contributions. The code stays MIT either way.
+- **P-2 Licence for lesson content.** CC BY 4.0 invites translation and reuse; CC BY-NC 4.0 blocks commercial reuse but is likely to attract fewer contributions. The code stays MIT either way. While the repository is private (D-007), contributions can't reach us through it, but anyone can reuse what the site publishes from the day it goes live.
 - **P-3 The first three lessons after BB-001.** The candidates are on the [content map](Content-Map).
 - **P-4 Analytics.** None at all, or privacy-light analytics used only to find where learners get stuck.
 - **P-5 Repository name.** Decided: `bikinibrains` (D-006).
+- **P-6 Going public again.** The repository is private for now (D-007). When does it become public again?
 
 Longer-term questions, not yet on the decision log:
 

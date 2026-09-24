@@ -9,14 +9,16 @@ This page records the choices that shape bikinibrains: what was decided, why, an
 |---|---|---|
 | D-001 | Free forever | Accepted |
 | D-002 | Static site on GitHub Pages, at bikinibrains.com | Accepted |
-| D-003 | Planning in the open: wiki for docs, issues for work | Accepted |
+| D-003 | Planning in the open: wiki for docs, issues for work (see D-007) | Accepted |
 | D-004 | Private references are never named in public | Accepted |
 | D-005 | Working visual direction: the engineering drawing | Proposed |
 | D-006 | Repository name: bikinibrains (was P-5) | Accepted |
+| D-007 | The repository is private for now | Accepted |
 | P-1 | Default paper | Owner's call |
 | P-2 | Licence for lesson content | Owner's call |
 | P-3 | First three lessons after BB-001 | Owner's call |
 | P-4 | Analytics | Owner's call |
+| P-6 | Making the repository public again | Owner's call |
 
 **Statuses.** *Proposed* means it is our working assumption, but not yet confirmed. *Accepted* means it is in force. *Superseded* means a later decision replaced it, and the entry names which one. We never delete or rewrite an accepted decision. If we change our minds, a new entry supersedes it, so the history stays readable.
 
@@ -60,6 +62,7 @@ This page records the choices that shape bikinibrains: what was decided, why, an
 
 - **Status:** Accepted
 - **Date:** 2026-09-23
+- **See also:** D-007. The repository is private for now, so the wiki and the issues are open only to the owner and collaborators, and this entry's last consequence is on hold until it opens again. Everything else here still holds.
 
 **Context.** The repository is public. The plan needs one place that newcomers can read and the owner can decide from, and the work needs to be visible and trackable. Documents that are edited without review drift, and nobody can see why they changed.
 
@@ -77,6 +80,7 @@ This page records the choices that shape bikinibrains: what was decided, why, an
 
 - **Status:** Accepted
 - **Date:** 2026-09-23
+- **See also:** D-007. The rule applies in full while the repository is private, because its history, the wiki's history and every issue become public if it opens again.
 
 **Context.** While shaping the idea, the owner looked privately at other products for inspiration. The repository, the wiki and the issues are public. Naming those products here would invite comparisons we don't want, could suggest a connection or endorsement that doesn't exist, and would pull our pages towards describing someone else's work instead of our own.
 
@@ -112,6 +116,7 @@ Two things are not affected by this rule. Published learning-science research is
 
 - **Status:** Accepted
 - **Date:** 2026-09-23
+- **Issue:** #39 (was P-5)
 
 **Context.** D-002 decided to rename the repository after the domain, and P-5 asked whether the name should be exactly "bikinibrains.com" or "bikinibrains".
 
@@ -122,6 +127,26 @@ Two things are not affected by this rule. Published learning-science research is
 - GitHub redirects the old repository, issue, wiki and Git addresses from `A-star-Algorithm`, so older links keep working. Nobody should create a new repository called `A-star-Algorithm` under this account, because that would break the redirects.
 - The GitHub Pages address moved to kamaljeetsahoo.github.io/bikinibrains/. The old Pages address is not redirected. Readers will see bikinibrains.com once the custom domain is set.
 - Links that spelled out the old name in the repository and the wiki were updated in the same change.
+
+### D-007 The repository is private for now
+
+- **Status:** Accepted
+- **Date:** 2026-09-24
+- **Issue:** #ISSUE_PRIVATE
+
+**Context.** Since D-003 the repository, the wiki and the issues have been public. On 2026-09-24 the owner decided to make the repository private for now. When it becomes public again is still open (P-6).
+
+**Decision.** The repository, and with it the wiki and the issues, is private for now. Only the owner and the collaborators they invite can see it. The site on GitHub Pages stays public and publishes only the demo.
+
+**Consequences.**
+
+- The way we work doesn't change. The wiki holds the living documents, issues hold the work, and every change goes through a pull request (D-003). Only the audience is smaller.
+- Nobody outside the project can read the wiki, open an issue or send a pull request. Links to the repository, the wiki or the issues, old `A-star-Algorithm` links included, show "page not found" to anyone who isn't a collaborator.
+- A GitHub Pages site stays public even when its repository is private, and Pages builds the whole of `master`. So `_config.yml` lists what the site publishes: `index.html`, the stylesheet, the scripts in `src/` and the licence. Anything not listed, including `wiki/`, stays off the site. The demo's links to the repository are removed until it opens again.
+- Pages and the wiki work in a private repository only because the owner's account is on GitHub Pro. If the account moved to GitHub Free while the repository was private, GitHub would unpublish the site. Actions runs now count against the 3,000 minutes a month that Pro includes.
+- GitHub's secret scanning and push protection only cover public repositories, so nothing stops a password or token committed by mistake. Keep secrets out of commits.
+- D-004 applies in full. If the repository opens again, its whole history opens with it: every commit, the wiki's history, and every issue and comment.
+- Changing visibility erases a repository's stars and watchers. There are none to lose, but the owner should check afterwards that they are still watching it.
 
 ## Pending: the owner's call
 
@@ -195,18 +220,19 @@ Other choices will come up as the work goes on, such as how the site is structur
 
 **Owner's call.**
 
-### P-5 Repository name (decided: see D-006)
+### P-6 Making the repository public again
 
-**The question.** What is the repository renamed to? The rename itself is decided (D-002).
+**The question.** The repository is private for now (D-007). When does it become public again?
 
 | Option | For | Against |
 |---|---|---|
-| `bikinibrains.com` | Exactly the domain, so it is unmistakable. | The dot is allowed, but the name reads like a web address in commands and folder names. |
-| `bikinibrains` | Short and clean in commands and paths. It names the project, not an address. | Not literally the domain. |
+| Before launch | People outside the project can follow the plan, report problems and propose lessons before the site opens. | The plan is public while it is still changing. |
+| At launch | The site, its source and the plan open on the same day, so the about page can link to the source. | Until then, only collaborators can report a problem or help. |
+| After launch | The plan stays private for longer. | Readers of the live site can't open an issue or see the source, so the support page needs another way to report a bug. The case for contributions in P-2 waits too. |
 
-**Either way:** once the custom domain is set, readers see bikinibrains.com whatever the repository is called. The name only shows in GitHub addresses, in commands, and in the GitHub Pages address used until the domain is live. GitHub redirects the old addresses, and the [roadmap](Roadmap) lists what to update afterwards.
+**Either way:** before it opens, check the whole Git history, the wiki's history and every issue for anything D-004 rules out, because all of it becomes public at once. Then put back the demo's links to the repository, restore the parts of these pages that are on hold while it is private, and check that the wiki still restricts editing to collaborators.
 
-**When:** a Phase 0 exit criterion.
+**When:** before launch, because the about page, the support page and how readers report a bug depend on the answer.
 
 **Owner's call.**
 

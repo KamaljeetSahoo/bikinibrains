@@ -149,7 +149,7 @@ A lesson is done when all of these are true:
 
 Every lesson pull request also runs the automated checks (tests, contrast audit and accessibility checks), and they must pass.
 
-**Suggested addition, not yet agreed:** a correctness review by someone who knows the subject well. The [content map](Content-Map) already asks for a reviewer before a lesson is chosen.
+**Suggested addition, not yet agreed:** a correctness review by someone who knows the subject well. The [content map](Content-Map) already asks for a reviewer before a lesson is chosen. While the repository is private (D-007), an outside reviewer can see a lesson's pull request only once the owner adds them as a collaborator, which on a personal account also lets them push changes. The owner decides whether to invite them or to share the lesson another way.
 
 ## Worked example: BB-001
 

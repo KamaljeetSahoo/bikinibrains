@@ -2,7 +2,8 @@
 > works, each one a precise drawing you learn by acting on. The A\* visualiser below is where
 > it started, and the working prototype for the first lesson, BB-001. Plans live in the
 > [wiki](https://github.com/KamaljeetSahoo/bikinibrains/wiki) and the work is tracked in
-> [issues](https://github.com/KamaljeetSahoo/bikinibrains/issues).
+> [issues](https://github.com/KamaljeetSahoo/bikinibrains/issues). The repository is private for
+> now, so both are open only to collaborators.
 
 <div align="center">
 
@@ -14,7 +15,7 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
 [![Build step](https://img.shields.io/badge/build%20step-none-2ea44f?style=flat-square)](#why-there-is-no-build-step)
 [![Tests](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml/badge.svg)](https://github.com/KamaljeetSahoo/bikinibrains/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/KamaljeetSahoo/bikinibrains?style=flat-square&color=blue)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 ### [→ Open the live demo](https://kamaljeetsahoo.github.io/bikinibrains/)
 

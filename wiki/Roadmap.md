@@ -40,10 +40,18 @@ This is the cheapest test we have. A design system invented without a real lesso
 
 Done on 2026-09-23: the repository is now `KamaljeetSahoo/bikinibrains` (D-006 in the [decision log](Decision-Log)).
 
-- GitHub redirects the old web address, issue links, wiki and Git remote from `A-star-Algorithm`, so older links keep working.
+- GitHub redirects the old web address, issue links, wiki and Git remote from `A-star-Algorithm`, so older links keep working for anyone who can see the repository.
 - Links in the repository that spelled out the old name were updated in the same change: `wiki/`, the issue forms, issue config and pull request template under `.github/`, `README.md`, `package.json` and `index.html`.
 - The GitHub Pages address is the exception. The visualiser moved from kamaljeetsahoo.github.io/A-star-Algorithm/, which no longer answers, to kamaljeetsahoo.github.io/bikinibrains/. That matters little once the custom domain goes live.
 - Nobody should create a new repository called `A-star-Algorithm` under the same account, because that would stop the redirects working.
+
+### Keeping the repository private for now
+
+On 2026-09-24 the owner decided to make the repository private for now (D-007 in the [decision log](Decision-Log)). The code, the wiki and the issues are open only to the owner and collaborators until it opens again, and when that happens is the owner's call (P-6).
+
+- The site on GitHub Pages stays public, but it publishes only the demo. `_config.yml` leaves everything else out, including `wiki/`.
+- The demo's links to the repository are removed until it is public again.
+- While the repository is private, Pages, the wiki and the Actions minutes rely on the owner's GitHub Pro plan.
 
 ### Exit criteria
 
@@ -104,15 +112,17 @@ Real lesson content drives every component. The BB-001 mock from Phase 0 is the 
 - **Lesson page:** BB-001 as a guided lesson.
 - **Reference mode:** the finished sheet, with every layer, note and caption and a free sandbox, at one permanent address. Returning readers can show everything and skip the questions.
 - **About and colophon page:** who makes bikinibrains, how AI is and isn't used, and the credits. *Proposed:* a short support and costs page, linked from it, publishes what the site costs.
-- **The custom domain**, bikinibrains.com, served from GitHub Pages.
+- **The custom domain**, bikinibrains.com, served from GitHub Pages. If the repository is still private at launch, this relies on the owner's GitHub Pro plan.
 
 The analytics question (P-4) isn't needed for Phase 0. Its decision issue sits in Phase 3, so that it is answered before launch.
+
+*Proposed:* answer P-6, when the repository becomes public again, before launch too. The about page, the support page and how readers report a bug all depend on it.
 
 ### Exit criteria
 
 - [ ] Home, lesson page, reference mode and about page are live.
 - [ ] bikinibrains.com serves the site from GitHub Pages.
-- [ ] No account is needed for anything.
+- [ ] No account is needed for anything on the site.
 
 ## After launch
 
@@ -124,7 +134,7 @@ The analytics question (P-4) isn't needed for Phase 0. Its decision issue sits i
 
 ## Following the roadmap in issues
 
-Every task on the roadmap carries exactly one `phase:*` label. Each phase has an epic, a Feature issue labelled `epic`, with its tasks attached as sub-issues. One more epic, *Repository, hosting and tooling*, holds the set-up work, such as the rename and the domain. Each of its tasks carries the label of the phase that needs it. [How we work](How-We-Work) explains the full label set.
+Every task on the roadmap carries exactly one `phase:*` label. Each phase has an epic, a Feature issue labelled `epic`, with its tasks attached as sub-issues. One more epic, *Repository, hosting and tooling*, holds the set-up work, such as the rename, the domain and the repository's visibility. Each of its tasks carries the label of the phase that needs it. [How we work](How-We-Work) explains the full label set.
 
 These filters show the roadmap as it stands:
 
@@ -138,7 +148,7 @@ These filters show the roadmap as it stands:
 
 To see what is finished in a phase, change `is%3Aopen` to `is%3Aclosed`.
 
-These links use the repository's name since the rename. Links using the old name, A-star-Algorithm, are redirected by GitHub.
+These links use the repository's name since the rename. Links using the old name, A-star-Algorithm, are redirected by GitHub. While the repository is private, they open only for the owner and collaborators.
 
 ## Changing the roadmap
 

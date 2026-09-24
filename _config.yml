@@ -8,7 +8,7 @@ exclude: ["*"]
 include:
   - index.html
   - LICENSE
-  - CNAME
+  - CNAME   # keeps the custom domain once it is set (#41)
   - assets
   - css
   - src

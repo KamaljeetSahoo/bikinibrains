@@ -1,0 +1,16 @@
+# GitHub Pages builds this repository with Jekyll. Only the demo belongs on the
+# public site, so everything is left out except what is listed under include.
+# Jekyll matches include against each entry's own name, so the folders the page
+# uses are listed, then the kinds of file it loads from them. Anything else,
+# including a new top-level file or folder, stays off the site until it is added
+# here. The plans in wiki/ and the rest of the repository are private (D-007).
+exclude: ["*"]
+include:
+  - index.html
+  - LICENSE
+  - CNAME
+  - assets
+  - css
+  - src
+  - "*.css"
+  - "*.js"
